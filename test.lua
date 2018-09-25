@@ -7,6 +7,7 @@ function make_item(name, category, price, imported)
    return Item:new {
       name = name,
       category = category,
+      -- Note: prices are encoded in cents in integer objects for precision
       price = price * 100,
       imported = imported
    }
