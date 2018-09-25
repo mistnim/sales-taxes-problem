@@ -1,5 +1,6 @@
 function print_item(quantity, imported, name, price)
-   io.write(quantity, ' ', imported and 'imported ' or '', name, ' at ', price / 100, '\n') 
+   local pricefmt = string.format("%.02f", price / 100)
+   io.write(quantity, ' ', imported and 'imported ' or '', name, ' at ', pricefmt, '\n') 
 end
 
 Basket = {}
@@ -22,8 +23,8 @@ function Basket:printReceipt()
       total_tax = total_tax + tax
       print_item(element.quantity, item.imported, item.name, price)
    end
-   io.write(string.format('Sales Taxes: %.2f\n', total_tax / 100))
-   io.write(string.format('Total: %.2f\n', total_price / 100))
+   io.write(string.format('Sales Taxes: %.02f\n', total_tax / 100))
+   io.write(string.format('Total: %.02f\n', total_price / 100))
 end
 
 return { Basket = Basket }
