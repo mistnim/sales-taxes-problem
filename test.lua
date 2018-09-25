@@ -3,12 +3,19 @@ basket = require "basket"
 Item = item.Item
 Basket = basket.Basket
 
+function round (x)
+   local f = math.floor(x)
+   if x == f then return f
+   else return math.floor(x + 0.5)
+   end
+end
+
 function make_item(name, category, price, imported)
    return Item:new {
       name = name,
       category = category,
       -- Note: prices are encoded in cents in integer objects for precision
-      price = price * 100,
+      price = round(price * 100),
       imported = imported
    }
 end
