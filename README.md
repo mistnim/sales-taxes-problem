@@ -1,6 +1,6 @@
 # sales-taxes-problem
 
-To run the test on linux do
+To run the test on linux run
 
     $ lua test.lua
 
