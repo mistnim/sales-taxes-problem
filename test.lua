@@ -40,12 +40,12 @@ local basket3 = {
 
 io.write('Output 1:\n')
 local b1 = Basket:new(basket1)
-basket1:printReceipt()
+b1:printReceipt()
 
 io.write('\nOutput 2:\n')
 local b2 = Basket:new(basket2)
-basket2:printReceipt()
+b2:printReceipt()
 
 io.write('\nOutput 3:\n')
 local b3 = Basket:new(basket3)
-basket3:printReceipt()
+b3:printReceipt()
